@@ -1,0 +1,29 @@
+<h1>AngularJS Directives Example</h1>
+
+<!-- ngIf example -->
+<p *ngIf="isVisible">
+  This content is visible because 'isVisible' is true.
+</p>
+
+<h2>List of Fruits:</h2>
+<ul>
+  <li *ngFor="let fruit of fruits">{{ fruit }}</li>
+</ul>
+
+<h2>Selected Color:</h2>
+<p>You selected {{ selectedColor }}!</p>
+
+<hr>
+
+<!-- Custom Attribute Directive -->
+<p appHighlight>
+  This text is highlighted by a custom attribute directive.
+</p>
+
+<!-- Custom Directive Based on Condition -->
+<p [appStatusColor]="isSuccess">
+  This text's color changes based on the 'isSuccess' value.
+</p>
+
+<button (click)="toggleVisibility()">Toggle Visibility</button>
+<button (click)="toggleSuccess()">Toggle Success</button>

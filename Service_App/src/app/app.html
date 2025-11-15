@@ -1,0 +1,36 @@
+<h1 style="text-align: center; font-size: 40px; font-weight: bold;">
+  Item List
+</h1>
+
+<div style="text-align: center; margin-top: 20px;">
+  <input 
+    type="text" 
+    [(ngModel)]="newItem" 
+    placeholder="Enter new item"
+    style="width: 300px; padding: 8px;"
+  />
+
+  <button 
+    (click)="addItem()" 
+    style="padding: 8px 15px; margin-left: 10px;"
+  >
+    Add Item
+  </button>
+</div>
+
+<br /><br />
+
+<div *ngFor="let item of items; let i = index" style="text-align: center;">
+  <div style="display: inline-block; margin: 15px;">
+    <span style="font-size: 20px; margin-right: 20px;">{{ item }}</span>
+
+    <button 
+      (click)="removeItem(i)" 
+      style="padding: 8px 15px;"
+    >
+      Remove
+    </button>
+  </div>
+
+  <hr style="width: 60%;" />
+</div>

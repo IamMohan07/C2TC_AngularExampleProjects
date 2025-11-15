@@ -1,0 +1,19 @@
+<h2>Parent Component</h2>
+
+<input type="text" [(ngModel)]="parentMessage" />
+
+<hr>
+
+<child-comp 
+    [data]="parentMessage">
+</child-comp>
+
+<hr>
+
+<sibling1-comp
+    (send)="receiveFromSibling1($event)">
+</sibling1-comp>
+
+<sibling2-comp 
+    [received]="sibling2Received">
+</sibling2-comp>

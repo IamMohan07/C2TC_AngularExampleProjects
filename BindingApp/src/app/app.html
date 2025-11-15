@@ -1,0 +1,24 @@
+<h1>STUDENT NAME :{{studentName}}</h1>
+<h1>BATCH TRAINER NAME :{{trainerName}}</h1>
+<h1>BATCH NUMBER :{{batchName}}</h1>
+<h1>LOCATION OF THE STUDENT:{{Location}}</h1>
+<h1>CURRENT SESSION: {{session}}</h1>
+
+<!--Property binding & Event Binding-->
+
+<p>
+
+<input [value]="studentName" (input)="onUsernameInput($event)" placeholder="Enter your name"/>
+
+</p>
+
+<h2>the length of the trainer name: {{studentName.length}}</h2>
+
+<!--Event binding-->
+
+<button (click)="sayHello()">click me</button>
+
+
+<input type="text" [(ngModel)]="session" placeholder="Enter session"/>
+
+<p>You typed session: {{session}}</p>

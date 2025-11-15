@@ -1,0 +1,19 @@
+<h1 style="font-size: 48px; font-weight: bold;">{{ title }}</h1>
+
+<p><b>Formatted Date (Built-in):</b> {{ today | date:'fullDate' }}</p>
+
+<p><b>Original Number:</b> {{ numberValue }}</p>
+<p><b>Formatted Number:</b> {{ numberValue | number:'2.2-2' }}</p>
+
+<p><b>Original Price:</b> {{ priceValue }}</p>
+<p><b>Formatted Price:</b> {{ priceValue | currency }}</p>
+
+<br />
+
+<h2><b>Employee Details</b></h2>
+
+<ul>
+  <li *ngFor="let emp of employees">
+    {{ emp.name }} ({{ emp.designation | employeeDesignation }})
+  </li>
+</ul>
